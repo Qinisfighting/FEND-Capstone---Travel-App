@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Planner</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/css/socializer.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+</head>
+
+<body>
+  <div>
+    <div id="app">
+
+      <span class="holder headline">
+        Travel Planner
+        <br>
+      </span>
+
+      <span class="holder location">
+        <label for="location">Destination</label>
+        <input type="text" onfocus="this.value=''" name="location" id="location" placeholder="City (Berlin, Hongkong, New York...)">
+
+        <br>
+        <br>
+
+        <label for="datum1">Departure</label>
+        <input type="date" id="datum1" placeholder="please select a date within 16 days">
+        <br>
+        <br>
+
+        <label for="datum2">Return</label>
+        <input type="date" id="datum2" placeholder="please select a date within 16 days">
+      </span>
+
+      <span class="holder notes">
+        <label for="notes">Memo</label>
+        <textarea class="myInput" onfocus="this.value=''" id="notes" placeholder="Notes, reminders, to-do list, packing list etc."></textarea>
+        <button id="generate" class="btn" type="submit"> show trip </button>
+
+      </span>
+      <div id="loading" class="hidden"></div>
+
+    </div>
+
+    <br>
+
+    <div class="holder showEntry">
+
+      <div id="tripIMG" alt="Location"> </div>
+
+      <div id="tripText">
+        <div id="name"></div>
+        <div id="triplength"></div>
+        <div id="daystogo"></div>
+        <div id="temp"></div>
+        <div id="icon"></div>
+        <div id="memo"></div>
+        <br>
+        <button id="deleteTrip" class="btn" type="submit"> delete trip </button>
+        <button id="saveTrip" class="btn" type="submit"> save trip </button>
+  
+      </div>
+    </div>
+
+  </div>
+  
+  <button id="myBtn" title="Go to top">Top</button>
+
+  <div class="sr-sharebar sr-sb-vl sr-sb-left">
+    <div class="socializer a sr-40px sr-circle sr-rotate sr-vertical sr-bdr-md sr-bdr-grey sr-bg-white sr-sw-icon-1 sr-pad">
+      <span class="sr-facebook"><a href="https://www.facebook.com/ichbinQin" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i></a></span>
+      <span class="sr-twitter"><a href="https://twitter.com/ichbinQin" target="_blank" title="Twitter">
+          <i class="fab fa-twitter"></i></a></span>
+      <span class="sr-print"><a href="" onclick="window.print();return false;" target="_blank" title="Print" type="text/css" media="print">
+          <i class="fa fa-print"></i></a></span>
+      <span class="sr-email"><a href="mailto:yq.qualmann@gmail.com" target="_blank" title="Email">
+          <i class="fa fa-envelope"></i></a></span>
+      <span class="sr-whatsapp"><a href="https://api.whatsapp.com/send/?phone=004911111111111&text&type=phone_number&app_absent=0" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i></a></span>
+    </div>
+  </div>
+
+  <footer>
+    <p> QIN勤©2022 up&qu</p>
+  </footer>
+
+  <!--  
+ <script>
+  // when in the development phase this script is preferred to be commented to avoid dev-server error 
+  // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+      });
+  }
+  </script> 
+ 
+-->
+
+</body>
+
+</html>

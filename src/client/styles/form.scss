@@ -1,0 +1,155 @@
+@mixin theme($theme: rgba(151, 148, 148, 0.411)) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+  border: 1px solid #545454;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+form {
+  @include theme;   
+}
+
+
+
+label {
+  width: 350px;
+  height: 70px;
+  padding-top: 17px;
+
+}
+
+input {
+  width: 350px;
+  height: auto;
+  background: rgba(102, 86, 86, 0.575);
+  color: #f9f8f1da;
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  padding: 17px;
+  border-radius: 5px;
+  margin-right: 17px;
+
+}
+
+textarea {
+  background: rgba(102, 86, 86, 0.575);
+  color: #f9f8f1da;
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+  width: 350px;
+  height: 361px;
+  padding: 17px;
+  border-radius: 5px
+}
+
+
+.showEntry {
+  background: rgba(102, 86, 86, 0.575);
+  width: 755px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  display:none ;   
+  position: relative;     
+  margin-bottom: 100px;             
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  
+
+#tripText {
+  
+  max-width: 320px; 
+  color: #f9f8f1da;
+  font-size: 20px;
+  text-align: left;
+  display:inline-block;
+  padding-left: 10px;
+  margin:auto;
+  vertical-align: top
+  
+  img{
+    width: 20px;
+  }
+
+}
+
+#tripIMG {
+  height: auto;
+  text-align:right;
+  margin-bottom: 30px;
+  vertical-align: top;
+  padding: 10px;
+  display:inline-block;
+  margin-left: auto;
+
+img{
+ width: 400px; 
+ } 
+}
+
+}
+
+
+
+.btn {
+
+  width: 100px;
+  height: 40px;
+  background: #f0c239de;
+  color: #383838d3;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 12px;
+  float: right;
+  margin: 7px;
+ 
+
+  &:hover {
+    background-color: #175f1e96;
+    opacity: 1;
+    color: white;
+  }
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #f9f8f1da;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f9f8f1da;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f9f8f1da;
+  font-family: "Oswald", sans-serif;
+}

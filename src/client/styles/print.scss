@@ -1,0 +1,30 @@
+@media print {
+    #app {
+      visibility: hidden;
+
+      .showEntry  {
+        visibility: visible;
+        position:absolute;
+        //margin-top: 0px;
+        padding: 0px;
+        margin:auto
+      } 
+       
+    }
+
+    button{
+      visibility: hidden;
+    } 
+
+    .socializer{
+      visibility: hidden;
+    } 
+
+    footer{
+      visibility: hidden;
+    }
+     
+  
+  
+
+  }
