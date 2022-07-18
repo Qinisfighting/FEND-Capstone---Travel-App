@@ -48,10 +48,29 @@
 
     <div class="holder showEntry">
 
-      <div id="tripIMG" alt="Location"> </div>
 
+      <div id="tripIMG" alt="Location">  
+      </div>
+     
       <div id="tripText">
         <div id="name"></div>
+        
+      <div class="dropdown">
+        <div class="dropbtn"  id="countryPopup" onclick="countrydropdown()"> click to see more about the country...
+        </div> 
+
+          <div id="myDropdown" class="dropdown-content"> 
+            <div id="flags"></div >
+            <div id="official"></div >
+            <div  id="nativeName"></div>
+            <div  id="region"></div >
+            <div  id="capital"></div >
+            <div  id="languages"></div >
+            <div  id="currencies"></div>
+          </div> 
+       
+      </div>
+
         <div id="triplength"></div>
         <div id="daystogo"></div>
         <div id="temp"></div>
@@ -60,11 +79,23 @@
         <br>
         <button id="deleteTrip" class="btn" type="submit"> delete trip </button>
         <button id="saveTrip" class="btn" type="submit"> save trip </button>
-  
       </div>
+
+     
+
+      
+
+
+
     </div>
 
   </div>
+  
+ </div>
+ 
+      
+
+    
   
   <button id="myBtn" title="Go to top">Top</button>
 
@@ -86,6 +117,8 @@
   <footer>
     <p> QIN勤©2022 up&qu</p>
   </footer>
+
+ 
 
   <!--  
  <script>

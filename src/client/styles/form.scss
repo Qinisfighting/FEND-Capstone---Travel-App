@@ -49,15 +49,16 @@ textarea {
 .showEntry {
   background: rgba(102, 86, 86, 0.575);
   width: 755px;
-  height: fit-content;
+  height:auto;
   padding: 20px;
   border-radius: 5px;
-  justify-content: space-between;
+  //justify-content: space-between;
   display:none ;   
-  position: relative;     
+  //position: relative;     
   margin-bottom: 100px;             
   font-family: "Oswald", sans-serif;
   line-height: 1;
+  
   
 
 #tripText {
@@ -69,29 +70,64 @@ textarea {
   display:inline-block;
   padding-left: 10px;
   margin:auto;
-  vertical-align: top
+  vertical-align: top;
+  
   
   img{
-    width: 20px;
+    width: 100px;
   }
 
 }
 
 #tripIMG {
-  height: auto;
+  max-height: 600px;
   text-align:right;
-  margin-bottom: 30px;
   vertical-align: top;
   padding: 10px;
-  display:inline-block;
+  display: inline-block;
   margin-left: auto;
 
 img{
  width: 400px; 
  } 
+
+ }
+}
+
+
+.dropbtn {
+  color: rgb(235, 224, 125);
+  padding: 5px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+
+
+  &:hover, &:focus {
+  color: #222222;
 }
 
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #444;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+}
+
+
+.show {display: block;}
 
 
 

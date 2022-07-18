@@ -80,8 +80,12 @@ const updateUI = async(daysToGo) => {
           document.getElementById('temp').innerHTML = `<p>Typical weather for then: ${allData.data.weather.min}°C to ${allData.data.weather.max}°C</p>`; 
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo}</p>`;
-          document.getElementById('tripIMG').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`;
-       
+          document.getElementById('tripIMG').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`; 
+          document.getElementById('flags').innerHTML = `<img src="${allData.data.country.flags}" >`;
+          document.getElementById('official').innerHTML =`<p>Official name: ${allData.data.country.official}</p>`;
+          document.getElementById('region').innerHTML = `<p>Region: ${allData.data.country.region}</p>`;
+          document.getElementById('capital').innerHTML = `<p>Capital: ${allData.data.country.capital}</p>`;
+          
          return
 
       } catch(error) {
@@ -98,7 +102,11 @@ const updateUI = async(daysToGo) => {
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo} </p>`;
           document.getElementById('tripIMG').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`;
-          
+          document.getElementById('flags').innerHTML = `<img src="${allData.data.country.flags}">`;
+          document.getElementById('official').innerHTML =`<p>Official name: ${allData.data.country.official}</p>`;
+          document.getElementById('region').innerHTML = `<p>Region: ${allData.data.country.region}</p>`;
+          document.getElementById('capital').innerHTML = `<p>Capital: ${allData.data.country.capital}</p>`;
+
           return 
 
       } catch(error) {
@@ -110,7 +118,6 @@ const updateUI = async(daysToGo) => {
 
 
 export { handleSubmit }
-
 
 
 

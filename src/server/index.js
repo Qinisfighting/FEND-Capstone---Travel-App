@@ -45,6 +45,8 @@ console.log(`Your Weatherbit API key is ${process.env.weatherAPIKey}`);
 const weatherBaseURL_F = 'https://api.weatherbit.io/v2.0/forecast/daily?';
 const weatherBaseURL_C = 'https://api.weatherbit.io/v2.0/current?';
 
+const countryBaseURL = 'https://restcountries.com/v3.1/name/';
+
 const pixAPIKey = process.env.pixAPIKey;
 console.log(`Your Pixabay API Key is ${process.env.pixAPIKey}`);
 const pixBaseURL = 'https://pixabay.com/api/?';
@@ -65,6 +67,33 @@ const getGeo = async city => {
     console.log("geo fetch error", error);
   }
 };
+
+
+//restcountry fetch call
+const getCountry = async (Cname) => {
+  const countryAllData = await axios.get(`${countryBaseURL}${Cname}`);
+  try{
+    
+     const countryData = {
+          flags: countryAllData.data[0].flags.png,
+          official:  countryAllData.data[0].name.official,
+          //nativeName: countryAllData.data[0].name.Object.values(nativeName)[0].common,
+          region:  countryAllData.data[0].region,
+          capital: countryAllData.data[0].capital[0],
+          cca2: countryAllData.data[0].cca2,
+          //languages: countryAllData.data[0].Object.values(languages)[0],
+          //currencies: countryAllData.data[0].Object.values(currencies)[0].name,
+       }
+       console.log(countryData)
+       return countryData
+
+  }catch (error) {
+    console.log("country fetch error", error);
+ }
+}
+
+
+
 
 //weatherbit fetch call
 const getWeather = async (lat, lng, dayLength) => {
@@ -105,6 +134,9 @@ const getWeather = async (lat, lng, dayLength) => {
 }
 
 
+
+
+
 // pixabay fetch call
 const getImage = async city => {
   const pixAllData = await axios.get(`${pixBaseURL}key=${pixAPIKey}&q=${encodeURIComponent(city)}&image_type=photo`);
@@ -131,11 +163,13 @@ app.post('/addData', async (req, res) => {
       const memo = req.body.notes;
 
       let geo = await getGeo(city);
+      let country = await getCountry(geo.countryName);
       let weather = await getWeather(geo.lat, geo.lng, dayLength);
       let image =  await getImage(city);
       
       const newEntry = {
           geo,
+          country,
           weather,
           image,
           memo
@@ -149,6 +183,5 @@ app.post('/addData', async (req, res) => {
       console.log('error from post route from server', error)
   }
 })
-
 
 

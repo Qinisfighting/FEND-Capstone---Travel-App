@@ -1,4 +1,23 @@
- // Add delete trip button
+ //country click-dropdown 
+ 
+ function countrydropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+ 
+window.onclick = (event) => {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+ 
+//delete trip button
 function  deleteTrip(event) {
   event.preventDefault();
   
@@ -8,7 +27,7 @@ return force;
 }
 
   
-// Add scroll to top button
+//scroll to top button
   const mybutton = document.getElementById("myBtn");
   
   window.onscroll = function () {
@@ -35,7 +54,8 @@ return force;
   }
 
 
-  export {deleteTrip,
+  export {countrydropdown,
+    deleteTrip,
     scrollFunction,
     topFunction,
     }  
