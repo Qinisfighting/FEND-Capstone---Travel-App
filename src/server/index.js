@@ -45,7 +45,7 @@ console.log(`Your Weatherbit API key is ${process.env.weatherAPIKey}`);
 const weatherBaseURL_F = 'https://api.weatherbit.io/v2.0/forecast/daily?';
 const weatherBaseURL_C = 'https://api.weatherbit.io/v2.0/current?';
 
-const countryBaseURL = 'https://restcountries.com/v3.1/name/';
+const countryBaseURL = 'https://restcountries.com/v2/name/';
 
 const pixAPIKey = process.env.pixAPIKey;
 console.log(`Your Pixabay API Key is ${process.env.pixAPIKey}`);
@@ -72,20 +72,27 @@ const getGeo = async city => {
 //restcountry fetch call
 const getCountry = async (Cname) => {
   const countryAllData = await axios.get(`${countryBaseURL}${Cname}`);
+
+
   try{
     
      const countryData = {
+
           flags: countryAllData.data[0].flags.png,
-          official:  countryAllData.data[0].name.official,
-          //nativeName: countryAllData.data[0].name.Object.values(nativeName)[0].common,
+          name: countryAllData.data[0].name,
+          nativeName:  countryAllData.data[0].nativeName,
           region:  countryAllData.data[0].region,
-          capital: countryAllData.data[0].capital[0],
-          cca2: countryAllData.data[0].cca2,
-          //languages: countryAllData.data[0].Object.values(languages)[0],
-          //currencies: countryAllData.data[0].Object.values(currencies)[0].name,
+          population:countryAllData.data[0].population,
+          area:countryAllData.data[0].area,
+          timezones:countryAllData.data[0].timezones,
+          population:countryAllData.data[0].population,
+          callingCodes: countryAllData.data[0].callingCodes[0],
+          languages: countryAllData.data[0].languages[0].name,
+          currencies: countryAllData.data[0].currencies[0].name
        }
        console.log(countryData)
        return countryData
+
 
   }catch (error) {
     console.log("country fetch error", error);
@@ -161,6 +168,8 @@ app.post('/addData', async (req, res) => {
       const city = req.body.location;
       const dayLength = req.body.daysToGo;
       const memo = req.body.notes;
+      //const countryNames = encodeURIComponent(geo.countryName) 
+
 
       let geo = await getGeo(city);
       let country = await getCountry(geo.countryName);

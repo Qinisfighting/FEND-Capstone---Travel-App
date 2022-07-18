@@ -82,10 +82,18 @@ const updateUI = async(daysToGo) => {
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo}</p>`;
           document.getElementById('tripIMG').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`; 
           document.getElementById('flags').innerHTML = `<img src="${allData.data.country.flags}" >`;
-          document.getElementById('official').innerHTML =`<p>Official name: ${allData.data.country.official}</p>`;
+          document.getElementById('officialName').innerHTML =`<p>Name: ${allData.data.country.name}</p>`;
+          document.getElementById('nativeName').innerHTML = `<p>Native name: ${allData.data.country.nativeName}</p>`;
           document.getElementById('region').innerHTML = `<p>Region: ${allData.data.country.region}</p>`;
-          document.getElementById('capital').innerHTML = `<p>Capital: ${allData.data.country.capital}</p>`;
+          document.getElementById('population').innerHTML =`<p>Population: ${allData.data.country.population}</p>`;
+          document.getElementById('area').innerHTML = `<p>Area: ${allData.data.country.area}</p>`;
+          document.getElementById('timezones').innerHTML = `<p>Timezone: ${allData.data.country.timezones}</p>`;
+          document.getElementById('callingCodes').innerHTML =`<p>Calling Code: ${allData.data.country.callingCodes}</p>`;
+          document.getElementById('languages').innerHTML = `<p>Language: ${allData.data.country.languages}</p>`;
+          document.getElementById('currencies').innerHTML = `<p>Currencies: ${allData.data.country.currencies}</p>`;
           
+
+
          return
 
       } catch(error) {
@@ -102,10 +110,16 @@ const updateUI = async(daysToGo) => {
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo} </p>`;
           document.getElementById('tripIMG').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`;
-          document.getElementById('flags').innerHTML = `<img src="${allData.data.country.flags}">`;
-          document.getElementById('official').innerHTML =`<p>Official name: ${allData.data.country.official}</p>`;
+          document.getElementById('flags').innerHTML = `<img src="${allData.data.country.flags}" >`;
+          document.getElementById('officialName').innerHTML =`<p>Name: ${allData.data.country.name}</p>`;
+          document.getElementById('nativeName').innerHTML = `<p>Native name: ${allData.data.country.nativeName}</p>`;
           document.getElementById('region').innerHTML = `<p>Region: ${allData.data.country.region}</p>`;
-          document.getElementById('capital').innerHTML = `<p>Capital: ${allData.data.country.capital}</p>`;
+          document.getElementById('population').innerHTML =`<p>Population: ${allData.data.country.population}</p>`;
+          document.getElementById('area').innerHTML = `<p>Area: ${allData.data.country.area}</p>`;
+          document.getElementById('timezones').innerHTML = `<p>Timezone: ${allData.data.country.timezones}</p>`;
+          document.getElementById('callingCodes').innerHTML =`<p>Calling Code: ${allData.data.country.callingCodes}</p>`;
+          document.getElementById('languages').innerHTML = `<p>Language: ${allData.data.country.languages}</p>`;
+          document.getElementById('currencies').innerHTML = `<p>Currencies: ${allData.data.country.currencies}</p>`;
 
           return 
 
