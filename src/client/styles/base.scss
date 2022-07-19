@@ -9,6 +9,7 @@ html {
 }
 
 body {
+
     background-image:url("../img/background.jpg");
     background-attachment: fixed;
     background-position: center center;
@@ -23,6 +24,11 @@ body {
 }
 
 #app {
+
+  -webkit-transform: scale(0.87);
+  -moz-transform: scale(0.87);
+       transform: scale(0.87);
+
     display: grid;
     grid-template-columns: 400px,400px;
     grid-template-rows: 200px,200px,200px,200px;
@@ -30,6 +36,8 @@ body {
     justify-content: center;
     font-size: 30px;
     font-family: "Oswald", sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
     
 
     .headline {
@@ -37,9 +45,9 @@ body {
       justify-content: center;
       align-items: center;
       font-family: fantasy;
-      padding: 30px;
-      margin-top: 47px;
+      padding: 20px;
       margin-bottom: 17px;
+      margin-top: 0;
       letter-spacing:2px;
       grid-area: 1 / 1 / 2 / 3;
    
@@ -58,11 +66,13 @@ body {
     .datum2{
       grid-area:4 / 1 / 5 / 2;
       display: block;
+      margin-bottom: 0;
     }
 
     .notes{
       grid-area:2 / 2 / 5 / 3;
       display: block;
+      margin-bottom: 0;
     }
     
 
@@ -72,13 +82,14 @@ body {
       border-bottom: 16px solid #b8b393c4; 
       border-left: 16px solid #5f4c4c6e; 
       border-radius: 50%;
-      width: 80px;
-      height: 80px;
+      width: 50px;
+      height: 50px;
       animation: spin 2s linear infinite;
       position: fixed;
-      left: 47%;
+      left: 45%;
       top: 50%;
       z-index: 1;
+      margin-bottom: 0;
    }
 
    @keyframes spin {
@@ -99,15 +110,15 @@ body {
  #myBtn {
    display: none; 
    position: fixed; 
-   bottom: 50px; 
-   right: 50px; 
+   bottom: 40px; 
+   right: 40px; 
    z-index: 99; 
    border: none; 
    outline: none; 
    background-color: #f0c239de;
    color: #383838d3; 
    cursor: pointer; 
-   padding: 17px; 
+   padding: 10px; 
    border-radius: 10px; 
    font-size: 20px; 
    font-weight: bold;

@@ -51,7 +51,7 @@ const pixAPIKey = process.env.pixAPIKey;
 console.log(`Your Pixabay API Key is ${process.env.pixAPIKey}`);
 const pixBaseURL = 'https://pixabay.com/api/?';
 
-//geonames fetch call
+//geonames API call
 const getGeo = async city => {
   const geoAllData = await axios.get(`${geoBaseURL}=${encodeURIComponent(city)}&maxRows=1&username=${process.env.geoUsername}`);
 
@@ -64,12 +64,12 @@ const getGeo = async city => {
       console.log(geoData)
       return geoData;
   } catch (error) {
-    console.log("geo fetch error", error);
+    console.log("geo API error", error);
   }
 };
 
 
-//restcountry fetch call
+//restcountry API call
 const getCountry = async (Cname) => {
   const countryAllData = await axios.get(`${countryBaseURL}${Cname}`);
 
@@ -95,14 +95,14 @@ const getCountry = async (Cname) => {
 
 
   }catch (error) {
-    console.log("country fetch error", error);
+    console.log("country API error", error);
  }
 }
 
 
 
 
-//weatherbit fetch call
+//weatherbit API call
 const getWeather = async (lat, lng, dayLength) => {
   if (dayLength >= 0 && dayLength <= 16 ){
     const weatherAllData_F = await axios.get(`${weatherBaseURL_F}lat=${lat}&lon=${lng}&key=${weatherAPIKey}`);
@@ -119,8 +119,10 @@ const getWeather = async (lat, lng, dayLength) => {
             return  weatherData_F;    
 
       } catch (error) {
-          console.log("weather fetch error", error);
+          console.log("weather API error", error);
       }
+
+    //due to the free API limits, the user gets the current weather instead, when he choses a date in the past or in the future over 16 days
     } else {
     const weatherAllData_C = await axios.get(`${weatherBaseURL_C}lat=${lat}&lon=${lng}&key=${weatherAPIKey}`);
     try {
@@ -135,16 +137,31 @@ const getWeather = async (lat, lng, dayLength) => {
       return weatherData_C 
 
     } catch (error) {
-         console.log("weather fetch error", error);
+         console.log("weather API error", error);
     }
   } 
 }
 
 
+// pixabay API call for country when city is obscure
+const getImageC = async country => {
+  const pixAllDataC = await axios.get(`${pixBaseURL}key=${pixAPIKey}&q=${encodeURIComponent(country)}&image_type=photo`);
 
+  try {
 
+      const pixDataC = {
+          image_url:  pixAllDataC.data.hits[0].webformatURL,
+          image_alt:  pixAllDataC.data.hits[0].tags
+      }
+      console.log(pixDataC)
+      return pixDataC;
 
-// pixabay fetch call
+  } catch (error) {
+      console.log("country image API error", error);
+  }
+}
+
+// pixabay API call for city
 const getImage = async city => {
   const pixAllData = await axios.get(`${pixBaseURL}key=${pixAPIKey}&q=${encodeURIComponent(city)}&image_type=photo`);
 
@@ -158,28 +175,34 @@ const getImage = async city => {
       return pixData;
 
   } catch (error) {
-      console.log("image fetch error", error);
+      console.log("city image API error", error);
   }
 }
 
-// post data to front 
+
+
+// post all data to front 
 app.post('/addData', async (req, res) => {
   try {
       const city = req.body.location;
       const dayLength = req.body.daysToGo;
       const memo = req.body.notes;
-      //const countryNames = encodeURIComponent(geo.countryName) 
+      
 
 
       let geo = await getGeo(city);
       let country = await getCountry(geo.countryName);
       let weather = await getWeather(geo.lat, geo.lng, dayLength);
+      let imageC = await getImageC(geo.countryName);
       let image =  await getImage(city);
+                   
+      
       
       const newEntry = {
           geo,
           country,
           weather,
+          imageC,
           image,
           memo
           
@@ -189,7 +212,7 @@ app.post('/addData', async (req, res) => {
       res.status(201).send(projectData);
 
   } catch(error) {
-      console.log('error from post route from server', error)
+      console.log('error from server post route', error)
   }
 })
 

@@ -4,7 +4,7 @@
   color: #fff;
   border: 1px solid #545454;
   border-radius: 3px;
-  padding: 30px;
+  padding: 20px;
 }
 
 form {
@@ -17,6 +17,7 @@ label {
   width: 350px;
   height: 70px;
   padding-top: 17px;
+  margin-bottom: 0;
 
 }
 
@@ -25,50 +26,53 @@ input {
   height: auto;
   background: rgba(102, 86, 86, 0.575);
   color: #f9f8f1da;
-  font-size: 25px;
+  font-size: 22px;
   font-family: "Oswald", sans-serif;
   border: none;
-  padding: 17px;
+  padding: 10px;
   border-radius: 5px;
-  margin-right: 17px;
+  margin-right: 12px;
 
 }
 
 textarea {
   background: rgba(102, 86, 86, 0.575);
   color: #f9f8f1da;
-  font-size: 25px;
+  font-size: 22px;
   font-family: "Oswald", sans-serif;
-  width: 350px;
-  height: 361px;
-  padding: 17px;
-  border-radius: 5px
+  width: 355px;
+  height: 320px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 0;
 }
 
 
 .showEntry {
+ 
+
   background: rgba(102, 86, 86, 0.575);
-  width: 755px;
-  height:auto;
-  padding: 20px;
+  width: 735px;
+  padding: 17px;
   border-radius: 5px;
-  //justify-content: space-between;
   display:none ;   
-  //position: relative;     
-  margin-bottom: 100px;             
+  margin-top: 0;   
+  margin-bottom: 70px;          
   font-family: "Oswald", sans-serif;
   line-height: 1;
+  margin-left: 8px;
+  
   
   
 
 #tripText {
   
-  max-width: 320px; 
+  max-width: 300px; 
   color: #f9f8f1da;
   font-size: 20px;
   text-align: left;
   display:inline-block;
-  padding-left: 10px;
+  padding-left: 8px;
   margin:auto;
   vertical-align: top;
   
@@ -88,7 +92,7 @@ textarea {
   margin-left: auto;
 
 img{
- width: 400px; 
+  max-width: 400px; 
  } 
 
  }
@@ -101,6 +105,7 @@ img{
   font-size: 20px;
   border: none;
   cursor: pointer;
+  text-shadow: 2px 2px 2px #545454;
 
 
   &:hover, &:focus {
@@ -133,11 +138,11 @@ img{
 
 .btn {
 
-  width: 100px;
+  width: 77px;
   height: 40px;
   background: #f0c239de;
   color: #383838d3;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   font-family: "Oswald", sans-serif;
   border: none;
@@ -146,7 +151,9 @@ img{
   transition: 0.3s;
   border-radius: 12px;
   float: right;
-  margin: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 17px;
  
 
   &:hover {
