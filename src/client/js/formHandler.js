@@ -21,7 +21,7 @@ function handleSubmit(event) {
     setTimeout(function(){
     entry.style.display ="block"; 
     document.querySelector("#loading").classList.replace("showing","hidden");
-  }, 1200);
+  }, 2200);
   }
   
   //trigger the next two functions when the submit button is clicked
@@ -43,7 +43,7 @@ function getDayData(depart,end) {
   setTimeout(function(){
   document.getElementById('triplength').innerHTML = `<p>Depart: ${departToShow}</p> <p>Return: ${endToShow}</p>`;
   document.getElementById('daystogo').innerHTML = `<p>This trip lasts ${tripLength} day(s), is ${daysAway} day(s) away</p>`;
-  }, 1200);
+  }, 2200);
 
   return daysAway 
   }
