@@ -50,9 +50,13 @@ textarea {
 
 .showEntry {
  
+  -webkit-transform: scale(0.87);
+  -moz-transform: scale(0.87);
+       transform: scale(0.87);
 
   background: rgba(102, 86, 86, 0.575);
-  width: 735px;
+  width: 750px;
+  min-height: 550px;
   padding: 17px;
   border-radius: 5px;
   display:none ;   
@@ -60,8 +64,7 @@ textarea {
   margin-bottom: 70px;          
   font-family: "Oswald", sans-serif;
   line-height: 1;
-  margin-left: 8px;
-  
+  //margin-left: 8px;
   
   
 
@@ -72,9 +75,10 @@ textarea {
   font-size: 20px;
   text-align: left;
   display:inline-block;
-  padding-left: 8px;
+  padding-left: 10px;
   margin:auto;
   vertical-align: top;
+  
   
   
   img{
@@ -84,20 +88,22 @@ textarea {
 }
 
 #tripIMG {
-  max-height: 600px;
-  text-align:right;
+  
+  text-align: right;
   vertical-align: top;
   padding: 10px;
   display: inline-block;
-  margin-left: auto;
+  margin-left: 10px;
 
 img{
   max-width: 400px; 
+  max-height: 470px;
+  display: inline-block;
  } 
 
  }
-}
 
+}
 
 .dropbtn {
   color: rgb(235, 224, 125);
@@ -152,7 +158,7 @@ img{
   border-radius: 12px;
   float: right;
   margin-top: 10px;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
   margin-right: 17px;
  
 
@@ -164,9 +170,78 @@ img{
 }
 
 
+
 h1 {
   font-size: 36px;
 }
+/*
+
+
+ .showEntry2 {
+ 
+  background: rgba(102, 86, 86, 0.575);
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  display:none ;   
+  margin-top: 0;   
+  margin-bottom: 70px;          
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  margin-left: 8px;
+  display: flex;
+ 
+  
+
+#tripText {
+  
+  max-width: 180px;
+  color: #f9f8f1da;
+  font-size: 15px;
+  text-align: left;
+  display:inline-block;
+  margin-bottom:30px;
+  
+  
+  img{
+    width: 50px;
+  }
+
+}
+
+#tripIMG {
+  text-align:right;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+
+img{
+  max-width: 180px; 
+ } 
+
+ }
+
+ .dropbtn {
+ display: none;
+ margin: 0;
+}
+
+#saveTrip {
+  display: none;
+  margin: 0;
+  
+}
+
+
+}
+
+
+
+
+*/
+
+
+
 
 
 

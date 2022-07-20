@@ -21,7 +21,7 @@ function handleSubmit(event) {
     setTimeout(function(){
     entry.style.display ="block"; 
     document.querySelector("#loading").classList.replace("showing","hidden");
-  }, 2200);
+  }, 1500);
   }
   
   //trigger the next two functions when the submit button is clicked
@@ -39,11 +39,11 @@ function getDayData(depart,end) {
   let daysAway = Math.floor((depart.getTime() - now) / (1000 * 60 * 60 * 24));
   let tripLength = Math.floor((end.getTime() - depart.getTime()) / (1000 * 60 * 60 * 24));
 
-  //delay 1.2 second to show, so that it shows together with the content from updateUI
+  //delay 1.5 second to show, so that it shows together with the content from updateUI
   setTimeout(function(){
   document.getElementById('triplength').innerHTML = `<p>Depart: ${departToShow}</p> <p>Return: ${endToShow}</p>`;
   document.getElementById('daystogo').innerHTML = `<p>This trip lasts ${tripLength} day(s), is ${daysAway} day(s) away</p>`;
-  }, 2200);
+  }, 1500);
 
   return daysAway 
   }
@@ -104,7 +104,8 @@ const updateUI = async(daysToGo) => {
           console.log("error", error);
       }
   } else {
-      alert("For a proper submit response, please select a date within the next 16 days.")
+    //when the user forgets to select dates, he still gets at least the destination information and memo. 
+      alert("For a complete submit response, please select a date within the next 16 days.")
 
       try {
           const allData = await axios.get('http://localhost:7777/all')
@@ -136,7 +137,6 @@ const updateUI = async(daysToGo) => {
 
 
 export { handleSubmit }
-
 
 
 

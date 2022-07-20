@@ -1,5 +1,4 @@
- //country click-dropdown 
- 
+ //country card click and dropdown 
  function countrydropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -16,8 +15,40 @@ window.onclick = (event) => {
     }
   }
 }
+
+
+//save trip
+function  saveTrip(event) {
+
+  const savedTrip = document.querySelector('.showEntry').value;
+  localStorage.setItem('savedTrip', JSON.stringify(savedTrip));
+
+};
+
+/*
+
+// Reading data
+function getTrip(event) {
+  const storedValue = JSON.parse(localStorage.getItem('tripsaved'));
+  if(storedValue) {
+      document.querySelector('.showEntry2').innerHTML = storedValue;
+  }
+}
  
-//delete trip button
+
+//clone trip
+
+
+const tripToSave = document.querySelector('.showEntry');
+const cloneTrip = tripToSave.cloneNode(true);
+cloneTrip.id = 'showEntry2';
+cloneTrip.classList.add('showEntry2')
+  tripToSave.after(cloneTrip)
+
+*/
+
+
+//delete trip 
 function  deleteTrip(event) {
   event.preventDefault();
   
@@ -27,7 +58,7 @@ return force;
 }
 
   
-//scroll to top button
+//scroll to top 
   const mybutton = document.getElementById("myBtn");
   
   window.onscroll = function () {
@@ -54,7 +85,9 @@ return force;
   }
 
 
-  export {countrydropdown,
+  export {
+    saveTrip,
+    countrydropdown,
     deleteTrip,
     scrollFunction,
     topFunction,
