@@ -52,19 +52,22 @@ textarea {
  
   -webkit-transform: scale(0.87);
   -moz-transform: scale(0.87);
-       transform: scale(0.87);
+  -o-transform:scale(0.87);
+  -ms-transform:scale(0.87); 
+   transform: scale(0.87);
 
   background: rgba(102, 86, 86, 0.575);
   width: 750px;
   min-height: 550px;
   padding: 17px;
+  padding-bottom: 2px; 
   border-radius: 5px;
   display:none ;   
   margin-top: 0;   
   margin-bottom: 70px;          
   font-family: "Oswald", sans-serif;
   line-height: 1;
-  //margin-left: 8px;
+  
   
   
 

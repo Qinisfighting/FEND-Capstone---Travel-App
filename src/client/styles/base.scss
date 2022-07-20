@@ -20,15 +20,16 @@ body {
     margin: auto;
     align-items: center;
     padding-bottom: 117px;
-    
+  
 }
 
 #app {
-
   -webkit-transform: scale(0.87);
-  -moz-transform: scale(0.87);
-       transform: scale(0.87);
-
+    -moz-transform: scale(0.87);
+    -o-transform:scale(0.87);
+    -ms-transform:scale(0.87); 
+     transform: scale(0.87);
+ 
     display: grid;
     grid-template-columns: 400px,400px;
     grid-template-rows: 200px,200px,200px,200px;
