@@ -64,7 +64,6 @@ const getGeo = async city => {
       console.log(geoData)
       return geoData;
   } catch (error) {
-    alert("city not found.")
     console.log("geo API error", error);
   }
 };
@@ -73,7 +72,6 @@ const getGeo = async city => {
 //restcountry API call
 const getCountry = async (Cname) => {
   const countryAllData = await axios.get(`${countryBaseURL}${Cname}`);
-
 
   try{
     
@@ -99,9 +97,6 @@ const getCountry = async (Cname) => {
     console.log("country API error", error);
  }
 }
-
-
-
 
 //weatherbit API call
 const getWeather = async (lat, lng, dayLength) => {
@@ -180,24 +175,18 @@ const getImage = async city => {
   }
 }
 
-
-
 // post all data to front 
 app.post('/addData', async (req, res) => {
   try {
       const city = req.body.location;
       const dayLength = req.body.daysToGo;
       const memo = req.body.notes;
-      
-
 
       let geo = await getGeo(city);
       let country = await getCountry(geo.countryName);
       let weather = await getWeather(geo.lat, geo.lng, dayLength);
       let imageC = await getImageC(geo.countryName);
-      let image =  await getImage(city);
-                   
-      
+      let image =  await getImage(city);   
       
       const newEntry = {
           geo,

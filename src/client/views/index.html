@@ -10,89 +10,92 @@
 </head>
 
 <body>
-   
-    <section id="app">
+ 
+  <form id="app">
 
-      <span class="holder headline">
-        Travel Planner
-        <br>
-      </span>
+    <span class="holder headline">
+      Travel Planner
+      <br>
+    </span>
 
-      <span class="holder location">
-        <label for="location">Destination</label>
-        <input type="text" onfocus="this.value=''" name="location" id="location" placeholder="City (Berlin, Hongkong, São Paulo. . .)">
+    <span class="holder location">
+      <label for="location">Destination</label>
+      <input type="text" onfocus="this.value=''" name="location" id="location" placeholder="City (Berlin, Hongkong, São Paulo. . .)">
 
-        <br>
-        <br>
+      <br>
+      <br>
 
-        <label for="datum1">Departure</label>
-        <input type="date" id="datum1" placeholder="please select a date within 16 days">
-        <br>
-        <br>
+      <label for="datum1">Departure</label>
+      <input type="date" id="datum1" placeholder="please select a date within 16 days">
+      <br>
+      <br>
 
-        <label for="datum2">Return</label>
-        <input type="date" id="datum2" placeholder="please select a date within 16 days">
-      </span>
+      <label for="datum2">Return</label>
+      <input type="date" id="datum2" placeholder="please select a date within 16 days">
+    </span>
 
-      <span class="holder notes">
-        <label for="notes">Memo</label>
-        <textarea class="myInput" onfocus="this.value=''" id="notes" placeholder="Notes, reminders, to-do list, packing list etc."></textarea>
-        <button id="generate" class="btn" type="submit"> show trip </button>
-        <div id="loading" class="hidden"></div>
-      </span>
-      
-    </section>
+    <span class="holder notes">
+      <label for="notes">Memo</label>
+      <textarea class="myInput" onfocus="this.value=''" id="notes" placeholder="Notes, reminders, to-do list, packing list etc."></textarea>
+      <button id="generate" class="btn" type="submit"> show trip </button>
+      <div id="loading" class="hidden"></div>
+    </span>
 
-   
+ </form>
 
-    <section class="holder showEntry">
+  <section class="holder showEntry">
 
+    <div id="tripText">
+      <div id="name"></div>
 
-      <div id="tripText">
-        <div id="name"></div>
-        
       <div class="dropdown">
-        <div class="dropbtn"  id="countrydropdown" type="onclick"> Click to see country card . . . 
-        </div> 
+        <div class="dropbtn" id="countrydropdown" type="onclick"> Click to see country card . . .
+        </div>
 
-          <div id="myDropdown" class="dropdown-content"> 
-            <div id="flags"></div>
-            <div id="officialName"></div>
-            <div id="nativeName"></div>
-            <div id="region"></div>
-            <div id="population"></div>
-            <div id="area"></div>
-            <div id="timezones"></div>
-            <div id="callingCodes"></div>
-            <div id="languages"></div>
-            <div id="currencies"></div>
-          </div> 
-       
-       </div>
+        <div id="myDropdown" class="dropdown-content">
+          <div id="flags"></div>
+          <div id="officialName"></div>
+          <div id="nativeName"></div>
+          <div id="region"></div>
+          <div id="population"></div>
+          <div id="area"></div>
+          <div id="timezones"></div>
+          <div id="callingCodes"></div>
+          <div id="languages"></div>
+          <div id="currencies"></div>
+        </div>
 
-        <div id="triplength"></div>
-        <div id="daystogo"></div>
-        <div id="temp"></div>
-        <div id="icon"></div>
-        <div id="memo"></div>
-        <br>
-        
-      </div>
-      
-        <div id="tripIMG" alt="Location"> </div>
-
-      <div class="entrybtn">
-        
-        <button id="deleteTrip" class="btn" type="submit"> delete trip </button>&nbsp
-        <button id="saveTrip" class="btn" type="submit"> save trip </button>
-       
       </div>
 
-</section>
+      <div id="triplength"></div>
+      <div id="daystogo"></div>
+      <div id="temp"></div>
+      <div id="icon"></div>
+      <div id="memo"></div>
+      <br>
+
+    </div>
+
+    <div id="tripIMG" alt="Location"> </div>
+
+    <div class="entrybtn">
+
+      <button id="deleteTrip" class="btn" type="submit"> delete trip </button>&nbsp
+      <button id="saveTrip" class="btn" type="submit"> save trip </button>
+
+    </div>
+
+  </section>
+
+  <section class="savedTrip">
+    
+      <div id="tripIMG2" alt="Location"> </div>
+      <div id="tripText2"> </div>
+ 
+  </section>
 
 
-<section class="savedEntry">
-</section>
+
 
 
 
@@ -116,8 +119,6 @@
   <footer>
     <p> QIN勤©2022 up&qu</p>
   </footer>
-
- 
 
   <!--  
  <script>

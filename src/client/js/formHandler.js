@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 function handleSubmit(event) {
   event.preventDefault();
   const location = document.getElementById("location").value; 
@@ -134,7 +135,43 @@ const updateUI = async(daysToGo) => {
 }
 
 
-export { handleSubmit }
+
+
+const renderTripCard = async(daysToGo) => {
+  //make sure the city name begins with capital letter
+  const locationToShow = document.getElementById("location").value.charAt(0).toUpperCase() + document.getElementById("location").value.slice(1) ; 
+  let departToShow = new Date(document.getElementById("datum1").value).toDateString();
+
+  const render = document.querySelector(".savedTrip");
+  if (render.style.display === "none"){
+    render.style.display = "none";
+ } else {
+    render.style.display ="block"; 
+}
+  
+  try {
+          const allData = await axios.get('http://localhost:7777/all')
+
+         
+          document.getElementById('tripText2').innerHTML = `<p>${locationToShow}, ${allData.data.geo.countryName} </p>
+                                                            <p>${departToShow}</p>
+                                                            <p>${allData.data.weather.min}°C to ${allData.data.weather.max}°C</p>
+                                                            <p>${allData.data.weather.description} mostly </p>
+                                                            <p> <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`
+          document.getElementById('tripIMG2').innerHTML = `<img src="${allData.data.imageC.image_url} alt="${allData.data.imageC.image_alt}">`; 
+          document.getElementById('tripIMG2').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`;
+          return
+
+      } catch(error) {
+          console.log("error", error);
+      }
+  }
+
+
+
+export { handleSubmit,
+         renderTripCard 
+        }
 
 
 
