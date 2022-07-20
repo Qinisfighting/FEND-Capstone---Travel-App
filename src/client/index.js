@@ -1,6 +1,6 @@
 
 import { handleSubmit } from "./js/formHandler";
-import {saveTrip,countrydropdown, deleteTrip, scrollFunction, topFunction } from "./js/clicks";
+import {saveTrip,getTrip,countrydropdown, deleteTrip, scrollFunction, topFunction } from "./js/clicks";
 
 
 import "./styles/base.scss";
@@ -18,6 +18,7 @@ document.getElementById("myBtn").addEventListener("click", topFunction)
 
 export { handleSubmit,
          saveTrip,
+         getTrip,
          countrydropdown,
          deleteTrip,
          scrollFunction,

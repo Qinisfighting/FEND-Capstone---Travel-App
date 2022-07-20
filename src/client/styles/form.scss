@@ -58,9 +58,9 @@ textarea {
 
   background: rgba(102, 86, 86, 0.575);
   width: 750px;
-  min-height: 550px;
+  height: auto;
   padding: 17px;
-  padding-bottom: 2px; 
+  padding-bottom: 80px; 
   border-radius: 5px;
   display:none ;   
   margin-top: 0;   
@@ -78,14 +78,16 @@ textarea {
   font-size: 20px;
   text-align: left;
   display:inline-block;
+  padding-right: 0;
   padding-left: 10px;
-  margin:auto;
   vertical-align: top;
-  
-  
+  margin-right: 5px;
+   
   
   img{
-    width: 100px;
+    max-width: 100px;
+    padding: 0;
+    margin: 0;
   }
 
 }
@@ -98,11 +100,12 @@ textarea {
   display: inline-block;
   margin-left: 10px;
 
-img{
+img {
   max-width: 400px; 
   max-height: 470px;
   display: inline-block;
- } 
+
+  } 
 
  }
 
@@ -119,7 +122,7 @@ img{
 
   &:hover, &:focus {
   color: #222222;
-}
+  }
 
 }
 
@@ -161,8 +164,8 @@ img{
   border-radius: 12px;
   float: right;
   margin-top: 10px;
-  //margin-bottom: 10px;
-  margin-right: 17px;
+  margin: 0x;
+  margin-right: 20px;
  
 
   &:hover {
@@ -180,7 +183,7 @@ h1 {
 /*
 
 
- .showEntry2 {
+ .savedEntry {
  
   background: rgba(102, 86, 86, 0.575);
   max-width: 200px;

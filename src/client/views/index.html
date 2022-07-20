@@ -11,7 +11,7 @@
 
 <body>
    
-    <div id="app">
+    <section id="app">
 
       <span class="holder headline">
         Travel Planner
@@ -20,7 +20,7 @@
 
       <span class="holder location">
         <label for="location">Destination</label>
-        <input type="text" onfocus="this.value=''" name="location" id="location" placeholder="City (Berlin, Hongkong, Dubai...)">
+        <input type="text" onfocus="this.value=''" name="location" id="location" placeholder="City (Berlin, Hongkong, São Paulo. . .)">
 
         <br>
         <br>
@@ -41,18 +41,18 @@
         <div id="loading" class="hidden"></div>
       </span>
       
-     </div>
+    </section>
 
    
 
-    <div class="holder showEntry">
+    <section class="holder showEntry">
 
 
       <div id="tripText">
         <div id="name"></div>
         
       <div class="dropdown">
-        <div class="dropbtn"  id="countrydropdown" type="onclick"> Click to see country card ... 
+        <div class="dropbtn"  id="countrydropdown" type="onclick"> Click to see country card . . . 
         </div> 
 
           <div id="myDropdown" class="dropdown-content"> 
@@ -68,7 +68,7 @@
             <div id="currencies"></div>
           </div> 
        
-      </div>
+       </div>
 
         <div id="triplength"></div>
         <div id="daystogo"></div>
@@ -83,16 +83,19 @@
 
       <div class="entrybtn">
         
-        <button id="deleteTrip" class="btn" type="submit"> delete trip </button>
+        <button id="deleteTrip" class="btn" type="submit"> delete trip </button>&nbsp
         <button id="saveTrip" class="btn" type="submit"> save trip </button>
-        
-      </div> 
-    
+       
+      </div>
+
+</section>
 
 
-  </div>
-  
-  
+<section class="savedEntry">
+</section>
+
+
+
   <button id="myBtn" title="Go to top">Top</button>
 
   <div class="sr-sharebar sr-sb-vl sr-sb-left">

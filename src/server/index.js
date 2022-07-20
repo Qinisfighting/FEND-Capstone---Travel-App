@@ -54,7 +54,7 @@ const pixBaseURL = 'https://pixabay.com/api/?';
 //geonames API call
 const getGeo = async city => {
   const geoAllData = await axios.get(`${geoBaseURL}=${encodeURIComponent(city)}&maxRows=1&username=${process.env.geoUsername}`);
-
+  
   try {
     const geoData = {
       lat: geoAllData.data.geonames[0].lat,
@@ -64,6 +64,7 @@ const getGeo = async city => {
       console.log(geoData)
       return geoData;
   } catch (error) {
+    alert("city not found.")
     console.log("geo API error", error);
   }
 };

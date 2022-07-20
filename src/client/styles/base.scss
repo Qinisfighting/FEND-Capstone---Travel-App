@@ -24,7 +24,7 @@ body {
 }
 
 #app {
-  -webkit-transform: scale(0.87);
+    -webkit-transform: scale(0.87);
     -moz-transform: scale(0.87);
     -o-transform:scale(0.87);
     -ms-transform:scale(0.87); 
@@ -121,11 +121,11 @@ body {
    cursor: pointer; 
    padding: 10px; 
    border-radius: 10px; 
-   font-size: 20px; 
+   font-size: 17px; 
    font-weight: bold;
    box-shadow: 2px 4px 5px #444;
    transition: 0.3s;
-
+   
    &:hover {
       background-color: #175f1e96;
       opacity: 1;

@@ -71,6 +71,7 @@ const postTrip = async(location = '',  daysToGo = '', notes ='') => {
 
 // write the ready data from server in UI, according to two diffenrent situations from user date select
 const updateUI = async(daysToGo) => {
+  //make sure the city name begins with capital letter
   const locationToShow = document.getElementById("location").value.charAt(0).toUpperCase() + document.getElementById("location").value.slice(1) ; 
   if( daysToGo >= 0 && daysToGo <= 16) {
 
@@ -78,9 +79,6 @@ const updateUI = async(daysToGo) => {
           const allData = await axios.get('http://localhost:7777/all')
 
          
-          
-          
-          
           document.getElementById('name').innerHTML = `<p>My trip to: ${locationToShow}, ${allData.data.geo.countryName} </p>`
           document.getElementById('temp').innerHTML = `<p>Typical weather for then: ${allData.data.weather.min}°C to ${allData.data.weather.max}°C</p>`; 
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;

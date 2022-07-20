@@ -18,12 +18,23 @@ window.onclick = (event) => {
 
 
 //save trip
+
+
 function  saveTrip(event) {
 
   const savedTrip = document.querySelector('.showEntry').value;
-  localStorage.setItem('savedTrip', JSON.stringify(savedTrip));
-
+  localStorage.setItem('tripSaved', JSON.stringify(savedTrip));
 };
+
+
+function getTrip() {
+  var storedValue = localStorage.getItem('tripSaved');
+  if(storedValue) {
+      document.querySelector('.showEntry').value = storedValue;
+  }
+}
+
+window.onload = getTrip
 
 /*
 
@@ -87,6 +98,7 @@ return force;
 
   export {
     saveTrip,
+    getTrip,
     countrydropdown,
     deleteTrip,
     scrollFunction,
