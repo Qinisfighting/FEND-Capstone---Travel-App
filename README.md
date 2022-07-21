@@ -5,14 +5,15 @@
 
 The Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool, with which user can enter the trip location, the departing date and personal notes (reminders, packing list...), to formulate a travel plan with weather forecast, an image of the location and personal notes.
 
-Extended functionalities:
-    - Add end date and display length of trip.
-    - Pull in an alternative image.  
-    - Integrate the REST Countries API to pull in data for the country being visited.
-    - Allow the user to remove the trip.
-    - Incorporate icons into forecast.
-    - A memo function which allows user to entry anything that is important.
-    - A print button an the left which allow user to print their trip.
+## Extended functionalities:
+
+- Add end date and display length of trip.
+- Pull in an alternative image.  
+- Integrate the REST Countries API to pull in data for the country being visited.
+- Allow the user to remove the trip.
+- Incorporate icons into forecast.
+- A memo function which allows user to entry anything that is important.
+- A print button an the left which allow user to print their trip.
 
 ## Demo
 
