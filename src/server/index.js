@@ -61,6 +61,14 @@ const getGeo = async city => {
       lng: geoAllData.data.geonames[0].lng,
       countryName: geoAllData.data.geonames[0].countryName,
       }
+      /* 
+       if (geoData.countryName == "United States") {
+        geoData.countryName = "USA";
+          }   
+       I try to add the code above, but it somehow has no effect at all. I want to pass name "USA" to restCountry API because with the name "United States",
+       which is returned from geonames, restCountry API returns information of an Island called "United States", 
+       Luckily seems besides this, other country names are working fine.
+      */ 
       console.log(geoData)
       return geoData;
   } catch (error) {

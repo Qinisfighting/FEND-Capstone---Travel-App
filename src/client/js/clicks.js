@@ -36,27 +36,6 @@ function getTrip() {
 
 window.onload = getTrip
 
-/*
-
-// Reading data
-function getTrip(event) {
-  const storedValue = JSON.parse(localStorage.getItem('tripsaved'));
-  if(storedValue) {
-      document.querySelector('.showEntry2').innerHTML = storedValue;
-  }
-}
- 
-
-//clone trip
-
-
-const tripToSave = document.querySelector('.showEntry');
-const cloneTrip = tripToSave.cloneNode(true);
-cloneTrip.id = 'showEntry2';
-cloneTrip.classList.add('showEntry2')
-  tripToSave.after(cloneTrip)
-
-*/
 
 
 //delete trip 
