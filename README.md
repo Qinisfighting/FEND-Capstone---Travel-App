@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool, with which user can enter the trip destination, the departing and returning date and personal notes, to create a travel plan with weather forecast, an image of the destination, information of the country and notes.
+Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool, with which user can enter the trip destination, the departing and returning date and personal notes, to create a travel plan with weather forecast, an image of the destination, information of the country and notes.
 
 ## Extended functionalities:
 
@@ -47,19 +47,19 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 
 - cors
 - body-parser
-- Webpack Plugins and loaders 
+- webpack plugins and loaders 
 
 ## Installation 
 
-- clone the project to local device
+- Clone the project to local device
 
-- make sure Node(v14.0.0) and npm(v6.14.4) are installed from the terminal, and run
+- Make sure Node(v14.0.0) and npm(v6.14.4) are installed from the terminal, and run
 
    ```
    npm install
    ```
 
-- by package compatibility issues, please install plugins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Project-FEND-Capstone---Travel-App/blob/main/package.json), and run
+- By package compatibility issues, please install plugins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Project-FEND-Capstone---Travel-App/blob/main/package.json), and run
 
    ```
    npm i --legacy-peer-deps
@@ -68,7 +68,7 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 ## Start the project
 
 - Sign up for the first three API ID/keys from the link above and make sure dotenv package is installed
-- Create a .env file in the root of this Project and fill the file with the API keys 
+- Create a .env file in the root of this project and fill the file with the API keys 
 ```
 geoUsername = *********
 weatherAPIKey = *************************
@@ -99,5 +99,5 @@ Command | Action
 
 
 ## Extras
-Adding new features, fixing bugs or any other questions,Please feel free to contact me: **Yanqin Q** (*yq.qualmann@gmail.com*)
+Adding new features, fixing bugs or any other questions, Please feel free to contact me: **Yanqin Q** (*yq.qualmann@gmail.com*)
 
