@@ -19,29 +19,29 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 
 <img src="" width="1000"> 
 
-## References and Sourses
+
+## Environment
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
+## Build Tools
+
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+<img width="100px" alt="AXIOS" src="https://user-images.githubusercontent.com/8939680/57233884-20344080-6fe5-11e9-8df3-0df1282e1574.png">
+<img width="100px" alt="AXIOS" src="https://user-images.githubusercontent.com/110953/28352645-7a8a66d8-6c0c-11e7-83af-752609e7e072.png">
+
+## API
 
 - [geoNames API](http://www.geonames.org/export/web-services.html)
 - [Weatherbit API](https://www.weatherbit.io/api)
 - [Pixabay API](https://pixabay.com/api/docs/)
 - [restCountry API](https://restcountries.com/)
 
-
-## Environment
-
-    - Node
-    - Express    
-
-## Build Tools
-
-    - HTML
-    - CSS/SCSS
-    - Vanilla JavaScript
-    - Web API 
-    - axois
-    - Webpack
-    - Jest
-    - Service Worker & Workbox
 
 ## Dependencies
 
@@ -74,8 +74,13 @@ geoUsername = *********
 weatherAPIKey = *************************
 pixAPIKey = *************************
 ```
-- To build, run   `npm run build-prod` 
-- To start, run  `npm start`
+
+Command | Action
+:------------: | :-------------:
+`npm run build-prod` | Build project
+`npm start` | Run project
+`npm run build-dev` | develope project
+
 
 
 ## View the project
