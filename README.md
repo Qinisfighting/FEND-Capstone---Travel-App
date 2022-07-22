@@ -51,6 +51,8 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 
 ## Installation 
 
+- clone the project to local device
+
 - make sure Node(v14.0.0) and npm(v6.14.4) are installed from the terminal, and run
 
    ```
@@ -83,8 +85,8 @@ pixAPIKey = *************************
 
 ## Special Thanks
 
-["Promise chaining is dead. Long live async/await - LogRocket Blog" ]( https://blog.logrocket.com/promise-chaining-is-dead-long-live-async-await-445897870abc/)
-
+- ["Promise chaining is dead. Long live async/await - LogRocket Blog" ]( https://blog.logrocket.com/promise-chaining-is-dead-long-live-async-await-445897870abc/)
+- [Background image]( https://www.dreamstime.com/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-image150871769)
 
 ## Extras
 Adding new features, fixing bugs or any other questions,Please feel free to contact me: **Yanqin Q** (*yq.qualmann@gmail.com*)

@@ -16,37 +16,6 @@ window.onclick = (event) => {
   }
 }
 
-
-//save trip
-
-
-function  saveTrip(event) {
-
-  const savedTrip = document.querySelector('.showEntry').value;
-  localStorage.setItem('tripSaved', JSON.stringify(savedTrip));
-};
-
-
-function getTrip() {
-  var storedValue = localStorage.getItem('tripSaved');
-  if(storedValue) {
-      document.querySelector('.showEntry').value = storedValue;
-  }
-}
-
-window.onload = getTrip
-
-
-
-//delete trip 
-function  deleteTrip(event) {
-  event.preventDefault();
-  
-document.querySelector(".showEntry").style.display = "none";
-location.reload();
-return force;
-}
-
   
 //scroll to top 
   const mybutton = document.getElementById("myBtn");
@@ -74,12 +43,8 @@ return force;
     }); // For Chrome, Firefox, IE and Opera
   }
 
-
   export {
-    saveTrip,
-    getTrip,
     countrydropdown,
-    deleteTrip,
     scrollFunction,
     topFunction,
     }  
