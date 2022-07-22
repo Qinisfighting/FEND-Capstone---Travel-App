@@ -45,9 +45,9 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 
 ## Dependencies
 
-    - cors
-    - body-parser
-    - Webpack Plugins and loaders 
+- cors
+- body-parser
+- Webpack Plugins and loaders 
 
 ## Installation 
 
@@ -91,7 +91,12 @@ Command | Action
 ## Special Thanks
 
 - ["Promise chaining is dead. Long live async/await - LogRocket Blog" ]( https://blog.logrocket.com/promise-chaining-is-dead-long-live-async-await-445897870abc/)
+- ["Axios vs. fetch(): Which is best for making HTTP requests? - LogRocket Blog" ](https://blog.logrocket.com/axios-vs-fetch-best-http-requests/)
+- [How to store objects in HTML5 localStorage](https://stackoverflow.com/questions/2010892/how-to-store-objects-in-html5-localstorage)
+- [How to use Local Storage with JavaScript](https://www.youtube.com/watch?v=AfVUiQ-my4Q&t=1462s)
 - [Background image]( https://www.dreamstime.com/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-image150871769)
+- [markdown-badges](https://ileriayo.github.io/markdown-badges/)
+
 
 ## Extras
 Adding new features, fixing bugs or any other questions,Please feel free to contact me: **Yanqin Q** (*yq.qualmann@gmail.com*)
