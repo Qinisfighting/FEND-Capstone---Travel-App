@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool, with which user can enter the trip location, the departing date and personal notes (reminders, packing list...), to formulate a travel plan with weather forecast, an image of the location and personal notes.
+The Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool, with which user can enter the trip destination, the departing and returning date and personal notes, to formulate a travel plan with weather forecast, image of the destination, information of the country and memo.
 
 ## Extended functionalities:
 
@@ -95,7 +95,7 @@ Command | Action
 - [How to store objects in HTML5 localStorage](https://stackoverflow.com/questions/2010892/how-to-store-objects-in-html5-localstorage)
 - [How to use Local Storage with JavaScript](https://www.youtube.com/watch?v=AfVUiQ-my4Q&t=1462s)
 - [Background image]( https://www.dreamstime.com/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-image150871769)
-- [markdown-badges](https://ileriayo.github.io/markdown-badges/)
+- [Markdown badges](https://ileriayo.github.io/markdown-badges/)
 
 
 ## Extras
