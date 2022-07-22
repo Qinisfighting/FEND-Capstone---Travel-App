@@ -24,7 +24,7 @@ The Capstone Project of Front End Web Developer Nanodegree Program from Udacity,
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-## Build Tools
+## Build tools
 
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -88,7 +88,7 @@ Command | Action
 - [local](http://localhost:7777/)
 - [Netlify](https://travel-app-Qin.netlify.app)
 
-## Special Thanks
+## Special thanks
 
 - ["Promise chaining is dead. Long live async/await - LogRocket Blog" ]( https://blog.logrocket.com/promise-chaining-is-dead-long-live-async-await-445897870abc/)
 - ["Axios vs. fetch(): Which is best for making HTTP requests? - LogRocket Blog" ](https://blog.logrocket.com/axios-vs-fetch-best-http-requests/)
