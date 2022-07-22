@@ -77,9 +77,9 @@ pixAPIKey = *************************
 
 Command | Action
 :------------: | :-------------:
-`npm run build-prod` | Build project
-`npm start` | Run project
-`npm run build-dev` | develope project
+`npm run build-prod` | build 
+`npm start` | run 
+`npm run build-dev` | develope 
 
 
 
