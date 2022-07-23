@@ -73,14 +73,13 @@ const postTrip = async(location = '',  daysToGo = '', notes ='') => {
 // write the ready data from server in UI, according to two diffenrent situations from user date select
 const updateUI = async(daysToGo) => {
   //make sure the city name begins with capital letter
-  const locationToShow = document.getElementById("location").value.charAt(0).toUpperCase() + document.getElementById("location").value.slice(1) ; 
   if( daysToGo >= 0 && daysToGo <= 16) {
 
       try {
           const allData = await axios.get('http://localhost:7777/all')
 
          
-          document.getElementById('name').innerHTML = `<p>My trip to: ${locationToShow}, ${allData.data.geo.countryName} </p>`
+          document.getElementById('name').innerHTML = `<p>My trip to: ${allData.data.geo.cityName}, ${allData.data.geo.countryName} </p>`
           document.getElementById('temp').innerHTML = `<p>Typical weather for then: ${allData.data.weather.min}°C to ${allData.data.weather.max}°C</p>`; 
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo}</p>`;
@@ -109,7 +108,7 @@ const updateUI = async(daysToGo) => {
       try {
           const allData = await axios.get('http://localhost:7777/all')
 
-          document.getElementById('name').innerHTML = `<p>My trip to: ${locationToShow}, ${allData.data.geo.countryName} </p>`
+          document.getElementById('name').innerHTML = `<p>My trip to: ${allData.data.geo.cityName}, ${allData.data.geo.countryName} </p>`
           document.getElementById('temp').innerHTML = `<p>Current weather: ${allData.data.weather.temp}°C, feels ${allData.data.weather.feels}°C </p>`;
           document.getElementById('icon').innerHTML = `<p>${allData.data.weather.description} mostly   <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`;
           document.getElementById('memo').innerHTML = `<p>Memo: ${allData.data.memo} </p>`;
@@ -134,12 +133,13 @@ const updateUI = async(daysToGo) => {
     }
 }
 
+export { handleSubmit }
 
-
+/*
 
 const renderTripCard = async(daysToGo) => {
   //make sure the city name begins with capital letter
-  const locationToShow = document.getElementById("location").value.charAt(0).toUpperCase() + document.getElementById("location").value.slice(1) ; 
+
   let departToShow = new Date(document.getElementById("datum1").value).toDateString();
 
   const render = document.querySelector(".savedTrip");
@@ -151,16 +151,21 @@ const renderTripCard = async(daysToGo) => {
   
   try {
           const allData = await axios.get('http://localhost:7777/all')
-
-         
-          document.getElementById('tripText2').innerHTML = `<p>${locationToShow}, ${allData.data.geo.countryName} </p>
+          localStorage.setItem('tripSaved',  JSON.stringify(allData));
+    
+          document.getElementById('tripText2').innerHTML = `<p>${allData.data.geo.cityName}, ${allData.data.geo.countryName} </p>
                                                             <p>${departToShow}</p>
                                                             <p>${allData.data.weather.min}°C to ${allData.data.weather.max}°C</p>
                                                             <p>${allData.data.weather.description} mostly </p>
                                                             <p> <img src="https://www.weatherbit.io/static/img/icons/${allData.data.weather.icon}.png"></p>`
           document.getElementById('tripIMG2').innerHTML = `<img src="${allData.data.imageC.image_url} alt="${allData.data.imageC.image_alt}">`; 
           document.getElementById('tripIMG2').innerHTML = `<img src="${allData.data.image.image_url} alt="${allData.data.image.image_alt}">`;
+
+
+          
           return
+
+          
 
       } catch(error) {
           console.log("error", error);
@@ -170,10 +175,11 @@ const renderTripCard = async(daysToGo) => {
 
 
 export { handleSubmit,
+         //updateUI
          renderTripCard 
         }
 
-
+*/
 
 
 

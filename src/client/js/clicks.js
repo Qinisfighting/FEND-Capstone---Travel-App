@@ -16,68 +16,6 @@ window.onclick = (event) => {
   }
 }
 
-
-//save trip
-
-
-
-
-/*
-
-
-function  saveTrip(event) {
-
-  const savedTrip = document.querySelector('.showEntry').value;
-  localStorage.setItem('tripSaved', JSON.stringify(savedTrip));
-};
-
-
-function getTrip() {
-  const storedValue = localStorage.getItem('tripSaved');
-  if(storedValue) {
-      document.querySelector('.showEntry').value = storedValue;
-  }
-}
-
-window.onload = getTrip
-
-console.log('storedValue: ', JSON.parse(storedValue));
-
-
-
-
-
-
-// Reading data
-function getTrip(event) {
-  const storedValue = JSON.parse(localStorage.getItem('tripsaved'));
-  if(storedValue) {
-      document.querySelector('.showEntry2').innerHTML = storedValue;
-  }
-}
- 
-
-//clone trip
-
-
-const tripToSave = document.querySelector('.showEntry');
-const cloneTrip = tripToSave.cloneNode(true);
-cloneTrip.id = 'showEntry2';
-cloneTrip.classList.add('showEntry2')
-  tripToSave.after(cloneTrip)
-
-*/
-
-
-//delete trip 
-function  deleteTrip(event) {
-  event.preventDefault();
-  
-document.querySelector(".showEntry").style.display = "none";
-location.reload();
-return force;
-}
-
   
 //scroll to top 
   const mybutton = document.getElementById("myBtn");
@@ -107,9 +45,7 @@ return force;
 
 
   export {
-
     countrydropdown,
-    deleteTrip,
     scrollFunction,
     topFunction,
     }  

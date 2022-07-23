@@ -60,6 +60,7 @@ const getGeo = async city => {
       lat: geoAllData.data.geonames[0].lat,
       lng: geoAllData.data.geonames[0].lng,
       countryName: geoAllData.data.geonames[0].countryName,
+      cityName: geoAllData.data.geonames[0].name
       }
       console.log(geoData)
       return geoData;
