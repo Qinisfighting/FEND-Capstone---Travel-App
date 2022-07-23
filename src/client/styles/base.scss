@@ -24,11 +24,13 @@ body {
 }
 
 #app {
-    -webkit-transform: scale(0.87);
-    -moz-transform: scale(0.87);
-    -o-transform:scale(0.87);
-    -ms-transform:scale(0.87); 
-     transform: scale(0.87);
+   /*
+  -webkit-transform: scale(0.87);
+  -moz-transform: scale(0.87);
+  -o-transform:scale(0.87);
+  -ms-transform:scale(0.87); 
+   transform: scale(0.87);
+  */
  
     display: grid;
     grid-template-columns: 400px,400px;
@@ -37,7 +39,7 @@ body {
     justify-content: center;
     font-size: 30px;
     font-family: "Oswald", sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     padding-bottom: 0;
     
 

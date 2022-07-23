@@ -60,6 +60,7 @@ const getGeo = async city => {
       lat: geoAllData.data.geonames[0].lat,
       lng: geoAllData.data.geonames[0].lng,
       countryName: geoAllData.data.geonames[0].countryName,
+      cityName: geoAllData.data.geonames[0].name,
       }
       /* 
        if (geoData.countryName == "United States") {
@@ -196,7 +197,7 @@ app.post('/addData', async (req, res) => {
       const city = req.body.location;
       const dayLength = req.body.daysToGo;
       const memo = req.body.notes;
-      
+      const departDate = req.body.depart
 
 
       let geo = await getGeo(city);
@@ -213,6 +214,7 @@ app.post('/addData', async (req, res) => {
           weather,
           imageC,
           image,
+          departDate,
           memo
           
       }

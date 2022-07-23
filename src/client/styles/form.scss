@@ -49,13 +49,13 @@ textarea {
 
 
 .showEntry {
- 
+ /*
   -webkit-transform: scale(0.87);
   -moz-transform: scale(0.87);
   -o-transform:scale(0.87);
   -ms-transform:scale(0.87); 
    transform: scale(0.87);
-
+  */
   background: rgba(102, 86, 86, 0.575);
   width: 750px;
   height: auto;
@@ -63,12 +63,12 @@ textarea {
   padding-bottom: 80px; 
   border-radius: 5px;
   display:none ;   
-  margin-top: 0;   
+  margin-top: 20px;   
   margin-bottom: 70px;          
   font-family: "Oswald", sans-serif;
   line-height: 1;
   
-  
+
   
 
 #tripText {
@@ -179,6 +179,63 @@ img {
 
 h1 {
   font-size: 36px;
+}
+
+
+.savedEntry{
+
+  background: rgba(102, 86, 86, 0.575);
+  max-width: 200px;
+  padding: 10px;
+  padding-bottom: 80px;
+  border-radius: 5px;
+  display:none ;   
+  margin-top: 0;   
+  margin-bottom: 70px;          
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  
+ 
+  
+
+#tripText2 {
+  
+  max-width: 180px;
+  color: #f9f8f1da;
+  font-size: 21px;
+  text-align: left;
+  display:inline-block;
+  padding-top: 0px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom:0;
+  padding: 10px;
+  
+  
+  img{
+    width: 70px;
+  }
+
+}
+
+#tripImage2 {
+  text-align:center;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  //margin-left: auto;
+
+img{
+  max-width: 180px; 
+ } 
+
+ }
+  
+
+
+
+
 }
 
 

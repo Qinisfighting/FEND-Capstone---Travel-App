@@ -14,6 +14,8 @@ Capstone Project of Front End Web Developer Nanodegree Program from Udacity, aim
 - Incorporate icons into forecast.
 - A memo function which allows user to enter information relating to the trip.
 - A print button on the left which allows user to print their trip.
+- Use Local Storage to save trips.
+- Allow the user to add additional trips. 
 
 ## Demo
 
@@ -94,6 +96,8 @@ Command | Action
 - ["Axios vs. fetch(): Which is best for making HTTP requests? - LogRocket Blog" ](https://blog.logrocket.com/axios-vs-fetch-best-http-requests/)
 - [How to store objects in HTML5 localStorage](https://stackoverflow.com/questions/2010892/how-to-store-objects-in-html5-localstorage)
 - [How to use Local Storage with JavaScript](https://www.youtube.com/watch?v=AfVUiQ-my4Q&t=1462s)
+- [Scroll Back To Top Button](https://www.w3schools.com/howto/howto_js_dropdown.asp)
+- [Clickable Dropdown](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
 - [Background image]( https://www.dreamstime.com/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-image150871769)
 - [Markdown badges](https://ileriayo.github.io/markdown-badges/)
 
