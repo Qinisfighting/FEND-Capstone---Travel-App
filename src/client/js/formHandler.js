@@ -135,13 +135,16 @@ const updateUI = async(daysToGo) => {
 
 export { handleSubmit }
 
+<<<<<<< Updated upstream
 /*
+=======
+//render trip card to save
+>>>>>>> Stashed changes
 
 const renderTripCard = async(daysToGo) => {
   //make sure the city name begins with capital letter
 
   let departToShow = new Date(document.getElementById("datum1").value).toDateString();
-
   const render = document.querySelector(".savedTrip");
   if (render.style.display === "none"){
     render.style.display = "none";
