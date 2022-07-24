@@ -83,7 +83,6 @@ const getGeo = async city => {
 const getCountry = async (Cname) => {
   const countryAllData = await axios.get(`${countryBaseURL}${Cname}`);
 
-
   try{
     
      const countryData = {
@@ -109,9 +108,6 @@ const getCountry = async (Cname) => {
  }
 }
 
-
-
-
 //weatherbit API call
 const getWeather = async (lat, lng, dayLength) => {
   if (dayLength >= 0 && dayLength <= 16 ){
@@ -123,6 +119,7 @@ const getWeather = async (lat, lng, dayLength) => {
                 min: weatherAllData_F.data.data[daysToGoIndex].min_temp,
                 max: weatherAllData_F.data.data[daysToGoIndex].max_temp,
                 description: weatherAllData_F.data.data[daysToGoIndex].weather.description,
+                datetime: weatherAllData_F.data.data[daysToGoIndex].datetime,
                 icon: weatherAllData_F.data.data[daysToGoIndex].weather.icon,
             }
             console.log(weatherData_F)
@@ -151,7 +148,6 @@ const getWeather = async (lat, lng, dayLength) => {
     }
   } 
 }
-
 
 // pixabay API call for country when city is obscure
 const getImageC = async country => {
@@ -189,32 +185,25 @@ const getImage = async city => {
   }
 }
 
-
-
 // post all data to front 
 app.post('/addData', async (req, res) => {
   try {
       const city = req.body.location;
       const dayLength = req.body.daysToGo;
       const memo = req.body.notes;
-      const departDate = req.body.depart
-
-
+      
       let geo = await getGeo(city);
       let country = await getCountry(geo.countryName);
       let weather = await getWeather(geo.lat, geo.lng, dayLength);
       let imageC = await getImageC(geo.countryName);
       let image =  await getImage(city);
-                   
-      
-      
+                      
       const newEntry = {
           geo,
           country,
           weather,
           imageC,
           image,
-          departDate,
           memo
           
       }
