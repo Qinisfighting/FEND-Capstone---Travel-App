@@ -23,7 +23,7 @@ function showSavedTrip() {
     const dataJson = JSON.parse(data);
     console.log(dataJson);
     if (dataJson.data != null) {
-      let tripIMG2 = `<div id="tripIMG2" alt="Location"><img src="${dataJson.data.image.image_url} alt="${dataJson.data.image.image_alt}"></div>`;
+      let tripIMG2 = `<div id="tripIMG2" alt="Location"><img src="${dataJson.data.image.image_url} alt="${dataJson.data.image.image_alt}"></div>`;              
       let tripText2 = `<div id=tripText2><p>${dataJson.data.weather.datetime}</p>
                <h3>${dataJson.data.geo.cityName}, ${dataJson.data.geo.countryName}</h3>  
                <p>${dataJson.data.weather.min}°C to ${dataJson.data.weather.max}°C</p>

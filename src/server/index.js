@@ -32,7 +32,7 @@ app.listen(7777, () => {
 });
 
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+const projectData = {};
 
 //base URL and API username or keys
 const geoUsername = process.env.geoUsername;
