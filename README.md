@@ -1,3 +1,5 @@
+<img src="https://github.com/Qinisfighting/FEND-Capstone---Travel-App/blob/b880f59aa00fd15116bbdc503f7f0ae1391dad22/banner.jpg" width="1280px"> 
+
 # Project FEND Capstone - Travel App
 
 
